@@ -19,8 +19,10 @@ function checkEntry() {
     });
 }
 
-$(() => {
-    $(submitInput);
-    $(deleteEntry);
-    $(checkEntry);
-});
+function main() {
+    submitInput();
+    deleteEntry();
+    checkEntry();
+}
+
+$(main);
