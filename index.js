@@ -7,6 +7,20 @@ function submitInput() {
     });
 }
 
+function deleteEntry() {
+    $('.shopping-list').on('click', '.shopping-item-delete', function (event) {
+        this.closest('li').remove();
+    });
+}
+
+function checkEntry() {
+    $('.shopping-list').on('click', '.shopping-item-toggle', function (event) {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+    });
+}
+
 $(() => {
     $(submitInput);
+    $(deleteEntry);
+    $(checkEntry);
 });
